@@ -15,7 +15,7 @@ const Login = () => {
       setError('Username dan Password tidak boleh kosong!');
       return;
     }
-    if (username === 'ali' && password === 'ali') {
+    if (username === 'desioplib' && password === 'desioplib') {
       alert('Login Berhasil!');
       setError('');
       router.push('/home');
