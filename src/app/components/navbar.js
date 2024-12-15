@@ -30,19 +30,19 @@ const Navbar = () => {
   return (
     <nav className='bg-white py-4 px-6 shadow-md relative'>
       <div className='flex justify-between items-center'>
-        {/* Logo dan Judul */}
         <div className='flex items-center gap-4'>
           <img
             src='/logoOplib.png'
             alt='Logo Open Library'
             className='w-10 sm:w-12'
+            onClick={() => router.push('/home')}
           />
           <h1 className='text-base sm:text-xl font-bold text-black'>
             Open Library Telkom University
           </h1>
         </div>
 
-        {/* Menu Burger untuk Mobile */}
+        {/* Burger Mobile */}
         <button
           className='block sm:hidden'
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menu Dropdown untuk Mobile */}
+      {/* Dropdown Mobile */}
       {isMenuOpen && (
         <div className='sm:hidden mt-4 bg-white rounded shadow-md'>
           <div

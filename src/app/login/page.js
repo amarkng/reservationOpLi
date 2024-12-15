@@ -10,7 +10,7 @@ const Login = () => {
   const router = useRouter();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Mencegah reload
+    e.preventDefault();
     if (!username || !password) {
       setError('Username dan Password tidak boleh kosong!');
       return;
@@ -28,22 +28,17 @@ const Login = () => {
     <div className='flex flex-col md:flex-row min-h-screen overflow-hidden'>
       {/* Sidebar Kiri */}
       <div className='flex-none bg-custom-red text-black flex flex-col justify-center items-center relative w-full md:w-2/5 min-h-screen'>
-        {/* Logo Telkom di Pojok Kiri Atas */}
         <div className='absolute top-4 left-4'>
-          <img src='/logoTelkom.png' alt='Telkom Logo' className='w-12' />
+          <img src='/logoTelkom.png' alt='Telkom Logo' className='w-24' />
         </div>
 
-        {/* Ikon Buku di Tengah */}
         <div className='mt-10'>
           <img src='/logoOplib.png' alt='Library Icon' className='w-20 h-20' />
         </div>
 
         {/* Form Login */}
         <div className='bg-white p-6 rounded-lg shadow-md w-[80%] max-w-sm mt-10'>
-          <form
-            className='flex flex-col gap-4'
-            onSubmit={handleSubmit} // Tambahkan handle submit
-          >
+          <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <input
               type='text'
               placeholder='Username'
@@ -59,7 +54,6 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             {error && <p className='text-red-700'>{error}</p>}{' '}
-            {/* Tampilkan error */}
             <button
               type='submit'
               className='w-full bg-red-700 text-white py-2 rounded hover:bg-red-800 transition'
@@ -78,7 +72,6 @@ const Login = () => {
         }}
       ></div>
 
-      {/* Copyright */}
       <footer className='absolute bottom-4 xl:right-4 text-white text-sm md:text-right text-center w-full md:w-auto'>
         <p className='px-4'>
           Copyright © 2024 Telkom University - Open Library. All rights

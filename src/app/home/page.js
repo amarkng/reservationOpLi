@@ -11,6 +11,9 @@ const Home = () => {
   const handleReservasiClick = () => {
     router.push('/reservasi');
   };
+  const handlePanduanClick = () => {
+    router.push('/panduan-reservasi');
+  };
 
   return (
     <div className='flex flex-col min-h-screen'>
@@ -35,7 +38,10 @@ const Home = () => {
           >
             Reservasi Ruangan
           </button>
-          <button className='bg-white bg-opacity-90 text-black font-bold py-4 sm:py-5 md:py-7 px-8 sm:px-10 rounded-xl shadow-lg hover:bg-gray-100 transition text-sm sm:text-base md:text-lg'>
+          <button
+            onClick={handlePanduanClick}
+            className='bg-white bg-opacity-90 text-black font-bold py-4 sm:py-5 md:py-7 px-8 sm:px-10 rounded-xl shadow-lg hover:bg-gray-100 transition text-sm sm:text-base md:text-lg'
+          >
             Panduan Reservasi
           </button>
         </div>

@@ -3,9 +3,11 @@
 import React from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import Sidebar from '../components/sidebar'; // Import Sidebar
+import ModalPesanRuangan from '../components/modal/ModalPesanRuangan';
+import ModalDetailReservasi from '../components/modal/ModalDetailReservasi';
 
 const ReservasiRuangan = () => {
-  // Data dummy reservasi
   const reservations = [
     {
       room: 'Tel-U BGD - Mini Studio',
@@ -58,33 +60,28 @@ const ReservasiRuangan = () => {
     'Tel-U BGD - Ruang Diskusi 12',
   ];
 
-  // Fungsi untuk menghitung posisi dan durasi berdasarkan waktu
   const calculatePosition = (startTime, endTime) => {
     const [startHour, startMinute] = startTime.split(':').map(Number);
     const [endHour, endMinute] = endTime.split(':').map(Number);
 
-    const startInMinutes = startHour * 60 + startMinute; // Total menit dari awal hari
+    const startInMinutes = startHour * 60 + startMinute;
     const endInMinutes = endHour * 60 + endMinute;
 
-    const gridColumnStart = Math.floor((startInMinutes - 480) / 30) + 2; // Kolom awal, mulai dari kolom kedua
-    const gridColumnSpan = Math.ceil((endInMinutes - startInMinutes) / 30); // Durasi dalam kolom
+    const gridColumnStart = Math.floor((startInMinutes - 480) / 30) + 2;
+    const gridColumnSpan = Math.ceil((endInMinutes - startInMinutes) / 30);
 
     return { gridColumnStart, gridColumnSpan };
   };
 
   return (
-    <div className='flex flex-col min-h-screen'>
-      {/* Navbar */}
+    <div className='flex flex-col min-h-screen relative'>
+      <Sidebar topPosition='top-36' />
       <Navbar />
-
-      {/* Hero Section */}
-      <header className='bg-gradient-to-b from-[#C12F2F] to-[#5A1818] text-white text-center py-6 px-6 sm:px-8'>
+      <header className='bg-custom-red text-white text-center py-2 px-6 sm:px-8'>
         <h1 className='text-2xl sm:text-3xl font-bold'>
           Reservasi Ruangan Open Library
         </h1>
       </header>
-
-      {/* Filter Reservasi */}
       <div className='bg-white p-4'>
         <div className='max-w-7xl mx-auto flex flex-wrap items-center gap-4'>
           <button className='bg-red-700 text-white py-2 px-4 rounded-lg font-bold shadow hover:bg-red-800'>
@@ -120,8 +117,6 @@ const ReservasiRuangan = () => {
           </button>
         </div>
       </div>
-
-      {/* Kalender Reservasi */}
       <div className='bg-white p-4 sm:p-6'>
         <div className='max-w-7xl mx-auto overflow-x-auto'>
           <div
@@ -130,7 +125,6 @@ const ReservasiRuangan = () => {
               gridTemplateColumns: `150px repeat(18, 1fr)`,
             }}
           >
-            {/* Header */}
             <div className='bg-red-700 text-white px-4 py-2'></div>
             {Array.from({ length: 9 }, (_, i) => (
               <div
@@ -141,10 +135,8 @@ const ReservasiRuangan = () => {
               </div>
             ))}
 
-            {/* Rows */}
             {rooms.map((room, i) => (
               <React.Fragment key={i}>
-                {/* Nama ruangan */}
                 <div
                   className='bg-red-700 text-white px-4 py-4'
                   style={{ gridRow: `${i + 2} / span 1` }}
@@ -152,7 +144,6 @@ const ReservasiRuangan = () => {
                   {room}
                 </div>
 
-                {/* Kolom waktu */}
                 {Array.from({ length: 18 }, (_, j) => (
                   <div
                     key={j}
@@ -160,7 +151,6 @@ const ReservasiRuangan = () => {
                   ></div>
                 ))}
 
-                {/* Reservations */}
                 {reservations
                   .filter((r) => r.room === room)
                   .map((r, idx) => {
@@ -185,8 +175,6 @@ const ReservasiRuangan = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

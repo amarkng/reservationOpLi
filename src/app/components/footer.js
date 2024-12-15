@@ -1,13 +1,7 @@
 const Footer = () => {
   return (
-    <footer className='bg-white py-10 px-6 relative'>
-      {/* Logo Telkom di Pojok Kanan Atas */}
-      <div className='absolute  right-6'>
-        <img src='/logoTelkom.png' alt='Telkom Logo' className='w-16' />
-      </div>
-
-      {/* Grid untuk 3 Kolom */}
-      <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-800'>
+    <footer className='bg-white py-10 px-6'>
+      <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-800'>
         {/* Kolom 1 */}
         <div>
           <h3 className='text-lg font-bold mb-2'>
@@ -38,6 +32,15 @@ const Footer = () => {
           <p className='font-bold text-sm mb-2'>No Kontak</p>
           <p className='text-sm'>081280000110</p>
           <p className='text-sm'>+6222 756 5929</p>
+        </div>
+
+        {/* Kolom 4 */}
+        <div className='flex justify-center items-center'>
+          <img
+            src='/logoTelkom.png'
+            alt='Telkom Logo'
+            className='w-16 xl:w-32'
+          />
         </div>
       </div>
     </footer>
