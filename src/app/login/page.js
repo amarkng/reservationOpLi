@@ -32,12 +32,12 @@ const Login = () => {
           <img src='/logoTelkom.png' alt='Telkom Logo' className='w-24' />
         </div>
 
-        <div className='mt-10'>
+        <div className='mt-2'>
           <img src='/logoOplib.png' alt='Library Icon' className='w-20 h-20' />
         </div>
 
         {/* Form Login */}
-        <div className='bg-white p-6 rounded-lg shadow-md w-[80%] max-w-sm mt-10'>
+        <div className='bg-white p-6 rounded-lg shadow-md w-[80%] max-w-sm mt-5'>
           <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
             <input
               type='text'

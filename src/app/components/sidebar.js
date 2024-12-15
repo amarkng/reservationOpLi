@@ -8,10 +8,10 @@ const Sidebar = ({ topPosition }) => {
 
   return (
     <>
-      {/* Tombol Hamburger */}
+      {/* Hamburger  */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed ${topPosition} left-4 z-50 text-white bg-custom-red p-2 rounded-full shadow-lg hover:bg-gray-700 transition`}
+        className={`fixed ${topPosition} left-4 z-50 text-white bg-custom-red p-2 rounded-full shadow-lg hover:bg-gray-700 transition hidden sm:block`}
       >
         <AiOutlineMenu size={24} />
       </button>
@@ -19,7 +19,7 @@ const Sidebar = ({ topPosition }) => {
       {/* Sidebar Content */}
       {isOpen && (
         <div
-          className={`fixed ${topPosition} left-4 w-64 bg-white shadow-lg z-50 rounded-md`}
+          className={`fixed ${topPosition} left-4 w-64 bg-white shadow-lg z-50 rounded-md hidden sm:block`}
         >
           <div className='flex justify-between items-center p-4 border-b border-gray-200'>
             <h2 className='text-lg font-bold text-black'>
@@ -41,16 +41,16 @@ const Sidebar = ({ topPosition }) => {
               Home
             </a>
             <a
-              href='/panduan-reservasi'
-              className='block hover:text-red-600 transition text-sm font-medium'
-            >
-              Panduan Reservasi
-            </a>
-            <a
               href='/reservasi'
               className='block hover:text-red-600 transition text-sm font-medium'
             >
               Reservasi Ruangan
+            </a>
+            <a
+              href='/panduan-reservasi'
+              className='block hover:text-red-600 transition text-sm font-medium'
+            >
+              Panduan Reservasi
             </a>
           </nav>
         </div>

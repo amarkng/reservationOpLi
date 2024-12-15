@@ -25,12 +25,12 @@ const PanduanReservasi = () => {
           </h1>
 
           <p className='mb-4'>
-            Selamat datang di Oplen Library Telkom University! Untuk mempermudah
+            Selamat datang di Open Library Telkom University! Untuk mempermudah
             Anda dalam melakukan reservasi ruangan, kami telah menyediakan
             panduan berikut yang menjelaskan ketentuan dan prosedur peminjaman
-            ruangan di Oplen Library. Pastikan untuk membaca dan mengikuti
-            aturan yang berlaku agar pengalaman Anda dalam menggunakan fasilitas
-            kami berjalan lancar.
+            ruangan di Open Library. Pastikan untuk membaca dan mengikuti aturan
+            yang berlaku agar pengalaman Anda dalam menggunakan fasilitas kami
+            berjalan lancar.
           </p>
 
           {/* Dropdown 1 */}

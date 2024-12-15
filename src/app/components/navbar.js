@@ -37,9 +37,37 @@ const Navbar = () => {
             className='w-10 sm:w-12'
             onClick={() => router.push('/home')}
           />
-          <h1 className='text-base sm:text-xl font-bold text-black'>
+          <h1 className='text-base sm:text-xl font-bold text-black hidden sm:block'>
             Open Library Telkom University
           </h1>
+          {/* Mobile Title */}
+          <div className='flex sm:hidden items-center gap-2 relative'>
+            <div
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className='flex items-center gap-2 cursor-pointer'
+            >
+              <img
+                src='/profile.png'
+                alt='Profile'
+                className='w-8 h-8 rounded-full'
+              />
+              <span className='text-gray-700 text-sm'>Halo, Pengguna</span>
+              <span className='transform transition-transform duration-300'>
+                {isDropdownOpen ? '▲' : '▼'}
+              </span>
+            </div>
+            {/* Dropdown Logout */}
+            {isDropdownOpen && (
+              <div className='absolute right-0 top-full mt-2 bg-white border border-gray-200 shadow-md rounded w-32'>
+                <button
+                  onClick={handleLogout}
+                  className='block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100'
+                >
+                  Keluar
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Burger Mobile */}
@@ -66,7 +94,6 @@ const Navbar = () => {
               {isDropdownOpen ? '▲' : '▼'}
             </span>
           </div>
-
           {/* Dropdown */}
           {isDropdownOpen && (
             <div
@@ -90,27 +117,26 @@ const Navbar = () => {
       {/* Dropdown Mobile */}
       {isMenuOpen && (
         <div className='sm:hidden mt-4 bg-white rounded shadow-md'>
-          <div
-            className='flex items-center gap-2 px-4 py-2 cursor-pointer'
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          >
-            <img
-              src='/profile.png'
-              alt='Profile'
-              className='w-8 h-8 rounded-full'
-            />
-            <span className='text-gray-700 text-sm'>Halo, Pengguna</span>
-          </div>
-          {isDropdownOpen && (
-            <div className='bg-black text-white rounded shadow-lg w-full'>
-              <button
-                onClick={handleLogout}
-                className='block w-full text-left px-4 py-2 hover:bg-gray-700'
-              >
-                Keluar
-              </button>
-            </div>
-          )}
+          <nav className='p-4 space-y-3 text-black'>
+            <a
+              href='/home'
+              className='block hover:text-red-600 transition text-sm font-medium'
+            >
+              Home
+            </a>
+            <a
+              href='/reservasi'
+              className='block hover:text-red-600 transition text-sm font-medium'
+            >
+              Reservasi Ruangan
+            </a>
+            <a
+              href='/panduan-reservasi'
+              className='block hover:text-red-600 transition text-sm font-medium'
+            >
+              Panduan Reservasi
+            </a>
+          </nav>
         </div>
       )}
     </nav>
