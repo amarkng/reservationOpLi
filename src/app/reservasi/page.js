@@ -45,7 +45,7 @@ const ReservasiRuangan = () => {
 
   const reservations = [
     {
-      room: 'Tel-U BGD - Mini Studio',
+      room: 'Tel-U BDG - Mini Studio',
       startTime: '08:30',
       endTime: '09:30',
       status: 'Attend',
@@ -60,7 +60,7 @@ const ReservasiRuangan = () => {
       purpose: 'Membuat video assessment',
     },
     {
-      room: 'Tel-U BGD - Mini Studio',
+      room: 'Tel-U BDG - Mini Studio',
       startTime: '09:30',
       endTime: '11:00',
       status: 'Approved',
@@ -71,7 +71,7 @@ const ReservasiRuangan = () => {
       purpose: 'Meeting tim project',
     },
     {
-      room: 'Tel-U BGD - Ruang Diskusi 02',
+      room: 'Tel-U BDG - Ruang Diskusi 02',
       startTime: '11:00',
       endTime: '12:30',
       status: 'Request',
@@ -82,7 +82,7 @@ const ReservasiRuangan = () => {
       purpose: 'Mengerjakan Tugas',
     },
     {
-      room: 'Tel-U BGD - Ruang Diskusi 05',
+      room: 'Tel-U BDG - Ruang Diskusi 05',
       startTime: '13:00',
       endTime: '14:30',
       status: 'Approved',
@@ -95,21 +95,21 @@ const ReservasiRuangan = () => {
   ];
 
   const rooms = [
-    'Tel-U BGD - Mini Studio',
-    'Tel-U BGD - Mini Theater',
-    'Tel-U BGD - Open Discussion Room',
-    'Tel-U BGD - Ruang Diskusi 01',
-    'Tel-U BGD - Ruang Diskusi 02',
-    'Tel-U BGD - Ruang Diskusi 04',
-    'Tel-U BGD - Ruang Diskusi 05',
-    'Tel-U BGD - Ruang Diskusi 08',
-    'Tel-U BGD - Ruang Diskusi 09',
-    'Tel-U BGD - Ruang Diskusi 11',
-    'Tel-U BGD - Ruang Diskusi 12',
+    'Tel-U BDG - Mini Studio',
+    'Tel-U BDG - Mini Theater',
+    'Tel-U BDG - Open Discussion Room',
+    'Tel-U BDG - Ruang Diskusi 01',
+    'Tel-U BDG - Ruang Diskusi 02',
+    'Tel-U BDG - Ruang Diskusi 04',
+    'Tel-U BDG - Ruang Diskusi 05',
+    'Tel-U BDG - Ruang Diskusi 08',
+    'Tel-U BDG - Ruang Diskusi 09',
+    'Tel-U BDG - Ruang Diskusi 11',
+    'Tel-U BDG - Ruang Diskusi 12',
   ];
 
   const roomsData = {
-    'Tel-U BGD - Mini Studio': {
+    'Tel-U BDG - Mini Studio': {
       image: '/detailRuangan.png',
       fasilitas: [
         'TV Digital',
@@ -126,7 +126,7 @@ const ReservasiRuangan = () => {
         { status: 'available', time: '14:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Mini Theater': {
+    'Tel-U BDG - Mini Theater': {
       image: '/detailRuangan.png',
       fasilitas: ['Proyektor', 'Sound System', 'AC', 'Kursi 20', 'Layar Besar'],
       ketersediaan: [
@@ -134,7 +134,7 @@ const ReservasiRuangan = () => {
         { status: 'reserved', time: '12:00 - 15:00' },
       ],
     },
-    'Tel-U BGD - Open Discussion Room': {
+    'Tel-U BDG - Open Discussion Room': {
       image: '/detailRuangan.png',
       fasilitas: ['Papan Tulis', 'Kursi 10', 'Meja Besar', 'AC'],
       ketersediaan: [
@@ -143,7 +143,7 @@ const ReservasiRuangan = () => {
         { status: 'available', time: '12:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 01': {
+    'Tel-U BDG - Ruang Diskusi 01': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 6', 'Meja', 'Papan Tulis'],
       ketersediaan: [
@@ -152,7 +152,7 @@ const ReservasiRuangan = () => {
         { status: 'reserved', time: '12:00 - 15:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 02': {
+    'Tel-U BDG - Ruang Diskusi 02': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 8', 'Meja Besar', 'AC'],
       ketersediaan: [
@@ -161,7 +161,7 @@ const ReservasiRuangan = () => {
         { status: 'available', time: '14:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 04': {
+    'Tel-U BDG - Ruang Diskusi 04': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 4', 'Meja', 'Lampu Terang'],
       ketersediaan: [
@@ -169,7 +169,7 @@ const ReservasiRuangan = () => {
         { status: 'available', time: '12:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 05': {
+    'Tel-U BDG - Ruang Diskusi 05': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 10', 'Meja Besar', 'Papan Tulis', 'AC'],
       ketersediaan: [
@@ -178,7 +178,7 @@ const ReservasiRuangan = () => {
         { status: 'available', time: '12:00 - 15:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 08': {
+    'Tel-U BDG - Ruang Diskusi 08': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 6', 'Meja', 'Proyektor Mini'],
       ketersediaan: [
@@ -187,7 +187,7 @@ const ReservasiRuangan = () => {
         { status: 'reserved', time: '13:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 09': {
+    'Tel-U BDG - Ruang Diskusi 09': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 8', 'Meja', 'Whiteboard'],
       ketersediaan: [
@@ -196,7 +196,7 @@ const ReservasiRuangan = () => {
         { status: 'available', time: '14:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 11': {
+    'Tel-U BDG - Ruang Diskusi 11': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 10', 'Meja Besar', 'Wi-Fi', 'Lampu Terang'],
       ketersediaan: [
@@ -205,7 +205,7 @@ const ReservasiRuangan = () => {
         { status: 'reserved', time: '13:00 - 16:00' },
       ],
     },
-    'Tel-U BGD - Ruang Diskusi 12': {
+    'Tel-U BDG - Ruang Diskusi 12': {
       image: '/detailRuangan.png',
       fasilitas: ['Kursi 12', 'Meja', 'Wi-Fi', 'AC'],
       ketersediaan: [
